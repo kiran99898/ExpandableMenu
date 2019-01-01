@@ -38,7 +38,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: myTableView.frame.size.width, height: 40))
+        let headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: myTableView.frame.size.width - 50, height: 40))
         headerView.delegate = self
         headerView.sectionIndx = section
         headerView.btn.setTitle(myData[section].headerName, for: .normal)
@@ -70,6 +70,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = myData[indexPath.section].subType![indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.section)
+        print(indexPath.row)
     }
     
     

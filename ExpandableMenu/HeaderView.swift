@@ -21,6 +21,7 @@ class HeaderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(btn)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,6 +36,26 @@ class HeaderView: UIView {
         btn.addTarget(self, action: #selector(headerTapped), for: .touchUpInside)
         return btn
     }()
+    
+    lazy var  upImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+        imageView.image = UIImage(named: "up")
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    lazy var  downImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+        imageView.image = UIImage(named: "down")
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    
     
     @objc
     func headerTapped() {
