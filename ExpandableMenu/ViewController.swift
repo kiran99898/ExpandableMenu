@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         
         myTableView.tableFooterView = UIView()
         
+        
     }
     
     
@@ -42,6 +43,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         headerView.delegate = self
         headerView.sectionIndx = section
         headerView.btn.setTitle(myData[section].headerName, for: .normal)
+        if myData[section].isExpandable {
+            headerView.downImage.isHidden = true
+        } else {
+            headerView.upImage.isHidden = true
+            
+        }
         return headerView
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

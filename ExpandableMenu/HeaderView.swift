@@ -15,12 +15,16 @@ protocol HeaderDelegate {
 
 class HeaderView: UIView {
     
+    let secTapped: Bool = false
+    
     var sectionIndx: Int?
     var delegate: HeaderDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(btn)
+        self.btn.addSubview(downImage)
+        self.btn.addSubview(upImage)
         
     }
     
@@ -36,21 +40,23 @@ class HeaderView: UIView {
         btn.addTarget(self, action: #selector(headerTapped), for: .touchUpInside)
         return btn
     }()
-    
+
     lazy var  upImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+        imageView.frame = CGRect(x: self.frame.maxX - 50, y: 8, width: 25, height: 25)
         imageView.image = UIImage(named: "up")
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-    
+
     lazy var  downImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+        imageView.frame = CGRect(x:self.frame.maxX - 50, y: 8, width: 25, height: 25)
         imageView.image = UIImage(named: "down")
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
