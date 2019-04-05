@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1016662255E6F000D46956 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1016652255E6F000D46956 /* FilterVC.swift */; };
+		9F1016692255E76F00D46956 /* FilterByTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1016682255E76F00D46956 /* FilterByTVCell.swift */; };
+		9F10166B2255E78300D46956 /* ProductTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10166A2255E78300D46956 /* ProductTVCell.swift */; };
+		9F10166D2255EEE000D46956 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10166C2255EEE000D46956 /* Data.swift */; };
 		9F31681E21DB46B700279A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31681D21DB46B700279A6C /* AppDelegate.swift */; };
 		9F31682021DB46B700279A6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31681F21DB46B700279A6C /* ViewController.swift */; };
 		9F31682321DB46B700279A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F31682121DB46B700279A6C /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F1016652255E6F000D46956 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		9F1016682255E76F00D46956 /* FilterByTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterByTVCell.swift; sourceTree = "<group>"; };
+		9F10166A2255E78300D46956 /* ProductTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTVCell.swift; sourceTree = "<group>"; };
+		9F10166C2255EEE000D46956 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9F31681A21DB46B700279A6C /* ExpandableMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpandableMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F31681D21DB46B700279A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F31681F21DB46B700279A6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F1016622255E69B00D46956 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				9F1016652255E6F000D46956 /* FilterVC.swift */,
+				9F1016672255E71800D46956 /* TVC */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		9F1016672255E71800D46956 /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				9F1016682255E76F00D46956 /* FilterByTVCell.swift */,
+				9F10166A2255E78300D46956 /* ProductTVCell.swift */,
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
 		9F31681121DB46B700279A6C = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +88,7 @@
 		9F31681C21DB46B700279A6C /* ExpandableMenu */ = {
 			isa = PBXGroup;
 			children = (
+				9F1016622255E69B00D46956 /* Filter */,
 				9F31681D21DB46B700279A6C /* AppDelegate.swift */,
 				9F31681F21DB46B700279A6C /* ViewController.swift */,
 				9F31682121DB46B700279A6C /* Main.storyboard */,
@@ -72,6 +99,7 @@
 				9F31683121DB470500279A6C /* HeaderView.swift */,
 				9F31683321DB55A400279A6C /* SectionCustomee.swift */,
 				9F31683421DB55A400279A6C /* SectionCustomee.xib */,
+				9F10166C2255EEE000D46956 /* Data.swift */,
 			);
 			path = ExpandableMenu;
 			sourceTree = "<group>";
@@ -148,10 +176,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1016662255E6F000D46956 /* FilterVC.swift in Sources */,
+				9F10166B2255E78300D46956 /* ProductTVCell.swift in Sources */,
 				9F31682021DB46B700279A6C /* ViewController.swift in Sources */,
 				9F31681E21DB46B700279A6C /* AppDelegate.swift in Sources */,
 				9F31683521DB55A400279A6C /* SectionCustomee.swift in Sources */,
+				9F1016692255E76F00D46956 /* FilterByTVCell.swift in Sources */,
 				9F31683021DB46EE00279A6C /* DataModel.swift in Sources */,
+				9F10166D2255EEE000D46956 /* Data.swift in Sources */,
 				9F31683221DB470500279A6C /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

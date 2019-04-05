@@ -43,21 +43,21 @@ class HeaderView: UIView {
 
     lazy var  upImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.frame = CGRect(x: self.frame.maxX - 50, y: 8, width: 25, height: 25)
+        imageView.frame = CGRect(x: self.frame.maxX - 20, y: 10, width: 20, height: 20)
         imageView.image = UIImage(named: "up")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = true
         return imageView
     }()
 
     lazy var  downImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.frame = CGRect(x:self.frame.maxX - 50, y: 8, width: 25, height: 25)
+        imageView.frame = CGRect(x:self.frame.maxX - 20, y: 10, width: 20, height: 20)
         imageView.image = UIImage(named: "down")
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = true
         return imageView
     }()
     

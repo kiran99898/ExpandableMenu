@@ -12,14 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myTableView: UITableView!
     
-    var myData = [DataModal(headerName: "Men", subType: ["Tshirts", "Shoes", "Pant"], isExpandable: false),
-                  DataModal(headerName: "Women", subType: ["MakeUp", "Shocks", "Shorts", "Bag", "Tag"], isExpandable: false),
-                  DataModal(headerName: "Children", subType: ["Book", "Shoes", "Cap"], isExpandable: false),
-                  DataModal(headerName: "Kitchen", subType: ["Cooker", "Pan", "Rice"], isExpandable: false),
-                  DataModal(headerName: "Sports", subType: ["Phone", "Laptop", "Data", "Copy", "Paste"], isExpandable: false),
-                   DataModal(headerName: "Office", subType: ["Phone", "Laptop", "Data", "Copy", "Paste"], isExpandable: false),
-                    DataModal(headerName: "Vehicke", subType: ["Phone", "Laptop", "Data", "Copy", "Paste"], isExpandable: false)]
-    
     
     
     override func viewDidLoad() {
@@ -37,7 +29,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
-    
+  /*
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: myTableView.frame.size.width - 50, height: 40))
         headerView.delegate = self
@@ -51,6 +43,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return headerView
     }
+ */
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
@@ -93,6 +86,26 @@ extension ViewController: HeaderDelegate {
         myTableView.reloadSections([indx], with: .fade)
     }
     
+    
+    
+    /*
+     ***Storm Victims Of Bara and Parsa: Waiting For Relief***
+     
+     The headline is in trending nowdays and I suppose We all are very much aware of the diseaster . so I think we can make some contribution to make the pain go away . So lets do it .
+     
+     According to my plan , lets collect RS 500 each or the amount as your wish and diposit the sum to the victims bank account .
+     
+      Please write + if you are in or - if you are not and  lets start collecting the sum .
+     "Trust me you will feel good "
+     
+     Thank You .
+     
+     
+     
+     
+     
+     
+     */
     
 }
 
